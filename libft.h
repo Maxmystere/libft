@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 15:23:46 by magrab            #+#    #+#             */
-/*   Updated: 2018/11/15 15:41:11 by magrab           ###   ########.fr       */
+/*   Updated: 2018/12/19 17:30:08 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@
 
 # include <stdio.h>
 
+/*
+** Define void * struct
+*/
+
 typedef struct s_list	t_list;
 
 struct		s_list
@@ -27,6 +31,24 @@ struct		s_list
 	size_t	content_size;
 	t_list	*next;
 };
+
+/*
+** Predefine struct w/
+** typedef ... t_type
+*/
+
+typedef char*	t_type;
+
+typedef struct s_node	t_node;
+
+struct		s_node {
+	t_type	data;
+
+	t_node	*prvs;
+	t_node	*next;
+};
+
+typedef t_node* t_tab;
 
 void		*ft_memset(void *s, int c, size_t n);
 void		ft_bzero(void *s, size_t n);
@@ -89,6 +111,11 @@ void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void		ft_lstadd(t_list **alst, t_list *new);
 void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+t_tab		ft_nodenew(t_type data);
+t_tab		ft_nodepushbegin(t_tab *start, t_type data);
+t_tab		ft_nodepushat(t_tab *start, t_type data, size_t pos);
+t_tab		ft_nodepushend(t_tab *start, t_type data);
 
 int			ft_isspace(int c);
 int			ft_islower(int c);

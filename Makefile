@@ -6,7 +6,7 @@
 #    By: magrab <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 19:18:49 by magrab            #+#    #+#              #
-#    Updated: 2018/12/19 16:58:41 by magrab           ###   ########.fr        #
+#    Updated: 2018/12/19 17:34:24 by magrab           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,10 @@ SRC=./ft_atoi.c \
 	./ft_memdel.c \
 	./ft_memmove.c \
 	./ft_memset.c \
+	./ft_nodenew.c \
+	./ft_nodepushat.c \
+	./ft_nodepushbegin.c \
+	./ft_nodepushend.c \
 	./ft_putchar.c \
 	./ft_putchar_fd.c \
 	./ft_putendl.c \
