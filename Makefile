@@ -6,7 +6,7 @@
 #    By: magrab <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 19:18:49 by magrab            #+#    #+#              #
-#    Updated: 2018/12/01 18:26:17 by magrab           ###   ########.fr        #
+#    Updated: 2018/12/19 16:58:41 by magrab           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,11 @@ SRC=./ft_atoi.c \
 	./ft_isalpha.c \
 	./ft_isascii.c \
 	./ft_isdigit.c \
+	./ft_islower.c \
+	./ft_isprime.c \
 	./ft_isprint.c \
+	./ft_isspace.c \
+	./ft_isupper.c \
 	./ft_itoa.c \
 	./ft_lstadd.c \
 	./ft_lstdel.c \
@@ -42,6 +46,7 @@ SRC=./ft_atoi.c \
 	./ft_putnbr_fd.c \
 	./ft_putstr.c \
 	./ft_putstr_fd.c \
+	./ft_sqrt.c \
 	./ft_strcat.c \
 	./ft_strchr.c \
 	./ft_strclr.c \
@@ -62,19 +67,17 @@ SRC=./ft_atoi.c \
 	./ft_strncpy.c \
 	./ft_strnequ.c \
 	./ft_strnew.c \
+	./ft_strnjoin.c \
 	./ft_strnstr.c \
 	./ft_strrchr.c \
+	./ft_strrev.c \
 	./ft_strsplit.c \
+	./ft_strsrchr.c \
 	./ft_strstr.c \
 	./ft_strsub.c \
 	./ft_strtrim.c \
 	./ft_tolower.c \
-	./ft_toupper.c \
-	./ft_strsrchr.c \
-	./ft_strrev.c \
-	./ft_sqrt.c \
-	./ft_isprime.c \
-	./ft_strnjoin.c
+	./ft_toupper.c
 
 OBJ=$(SRC:.c=.o)
 
