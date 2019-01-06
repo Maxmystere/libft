@@ -6,24 +6,25 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 17:48:25 by magrab            #+#    #+#             */
-/*   Updated: 2019/01/06 17:51:25 by magrab           ###   ########.fr       */
+/*   Updated: 2019/01/06 18:11:44 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_2dchar_free(char **map)
+int		ft_2dchar_free(char ***map)
 {
 	int x;
 
-	if (!map)
+	if (!map || *map)
 		return (0);
 	x = 0;
-	while (map[x])
+	while (*map[x])
 	{
-		free(map[x]);
+		free(*map[x]);
 		x++;
 	}
-	free(map);
+	free(*map);
+	*map = NULL;
 	return (0);
 }
