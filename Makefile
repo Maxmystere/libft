@@ -6,7 +6,7 @@
 #    By: magrab <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 19:18:49 by magrab            #+#    #+#              #
-#    Updated: 2018/12/19 17:34:24 by magrab           ###   ########.fr        #
+#    Updated: 2019/01/06 17:52:59 by magrab           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,14 +81,15 @@ SRC=./ft_atoi.c \
 	./ft_strsub.c \
 	./ft_strtrim.c \
 	./ft_tolower.c \
-	./ft_toupper.c
+	./ft_toupper.c \
+	./ft_2dchar_make.c \
+	./ft_2dchar_free.c
 
 OBJ=$(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	gcc -c -I $(HDR) $(SRC)
 	ar rc $(NAME) $(OBJ)
 
 clean:
