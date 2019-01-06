@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 15:23:46 by magrab            #+#    #+#             */
-/*   Updated: 2019/01/06 18:11:33 by magrab           ###   ########.fr       */
+/*   Updated: 2019/01/06 19:22:18 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,7 @@ t_tab		ft_nodepushend(t_tab *start, t_type data);
 
 char		**ft_2dchar_make(int x, int y);
 int			ft_2dchar_free(char ***map);
+void		ft_2dchar_print(char **map);
 
 int			ft_isspace(int c);
 int			ft_islower(int c);
