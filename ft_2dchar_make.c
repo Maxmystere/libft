@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 17:33:36 by magrab            #+#    #+#             */
-/*   Updated: 2019/01/08 17:49:07 by magrab           ###   ########.fr       */
+/*   Updated: 2019/01/08 18:03:15 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char		**ft_2dchar_make(int x, int y, char c)
 	v = 0;
 	while (v < x)
 	{
-		if (!(map[v] = ft_strnew_set(c, y + 1)))
+		if (!(map[v] = ft_strnew_set(c, y)))
 			return (NULL);
 		v++;
 	}
