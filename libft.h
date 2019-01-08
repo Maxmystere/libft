@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 15:23:46 by magrab            #+#    #+#             */
-/*   Updated: 2019/01/06 19:22:18 by magrab           ###   ########.fr       */
+/*   Updated: 2019/01/08 17:46:56 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ int			ft_tolower(int c);
 void		*ft_memalloc(size_t size);
 void		ft_memdel(void **ap);
 char		*ft_strnew(size_t size);
+char		*ft_strnew_set(char c, size_t size);
 void		ft_strdel(char **as);
 void		ft_strclr(char *s);
 void		ft_striter(char *s, void (*f)(char *));

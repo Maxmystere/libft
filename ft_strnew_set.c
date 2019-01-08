@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_2dchar_make.c                                   :+:      :+:    :+:   */
+/*   ft_strnew_set.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 17:33:36 by magrab            #+#    #+#             */
-/*   Updated: 2019/01/08 17:49:07 by magrab           ###   ########.fr       */
+/*   Created: 2019/01/08 17:48:15 by magrab            #+#    #+#             */
+/*   Updated: 2019/01/08 17:48:23 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		**ft_2dchar_make(int x, int y, char c)
+char	*ft_strnew_set(char c, size_t size)
 {
-	char	**map;
-	int		v;
+	char	*tmp;
 
-	if (!(map = malloc((x + 1) * sizeof(char *))))
+	if (!(tmp = (char *)malloc(++size * sizeof(char))))
 		return (NULL);
-	map[x] = NULL;
-	v = 0;
-	while (v < x)
-	{
-		if (!(map[v] = ft_strnew_set(c, y + 1)))
-			return (NULL);
-		v++;
-	}
-	return (map);
+	tmp[--size] = '\0';
+	while (size-- > 0)
+		tmp[size] = c;
+	return (tmp);
 }

@@ -6,7 +6,7 @@
 #    By: magrab <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 19:18:49 by magrab            #+#    #+#              #
-#    Updated: 2019/01/06 19:26:15 by magrab           ###   ########.fr        #
+#    Updated: 2019/01/08 17:47:22 by magrab           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ SRC=./ft_atoi.c \
 	./ft_strncpy.c \
 	./ft_strnequ.c \
 	./ft_strnew.c \
+	./ft_strnew_set.c \
 	./ft_strnjoin.c \
 	./ft_strnstr.c \
 	./ft_strrchr.c \
