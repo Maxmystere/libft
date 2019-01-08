@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 15:23:46 by magrab            #+#    #+#             */
-/*   Updated: 2019/01/08 17:53:37 by magrab           ###   ########.fr       */
+/*   Updated: 2019/01/08 17:55:37 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ t_tab		ft_nodepushbegin(t_tab *start, t_type data);
 t_tab		ft_nodepushat(t_tab *start, t_type data, size_t pos);
 t_tab		ft_nodepushend(t_tab *start, t_type data);
 
-char		**ft_2dchar_make(int x, int y);
+char		**ft_2dchar_make(int x, int y, char c);
 int			ft_2dchar_free(char ***map);
 void		ft_2dchar_print(char **map);
 
