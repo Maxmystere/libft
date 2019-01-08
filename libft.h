@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 15:23:46 by magrab            #+#    #+#             */
-/*   Updated: 2019/01/08 17:46:56 by magrab           ###   ########.fr       */
+/*   Updated: 2019/01/08 17:51:20 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,5 +131,7 @@ int			ft_sqrt(int nb);
 int			ft_isprime(int nb);
 
 char		*ft_strnjoin(char const *s1, char const *s2, size_t len);
+
+int			printf(const char *str, ...);
 
 #endif
