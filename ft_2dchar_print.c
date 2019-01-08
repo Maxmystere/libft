@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 19:00:16 by magrab            #+#    #+#             */
-/*   Updated: 2019/01/06 19:49:58 by magrab           ###   ########.fr       */
+/*   Updated: 2019/01/08 17:58:24 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_2dchar_print(char **map)
 		while (map[x])
 		{
 			ft_putstr(map[x]);
+			ft_putchar('\n');
 			x++;
 		}
 	}
