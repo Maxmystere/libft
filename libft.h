@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 15:23:46 by magrab            #+#    #+#             */
-/*   Updated: 2019/01/08 18:29:06 by magrab           ###   ########.fr       */
+/*   Updated: 2019/01/15 14:59:52 by tferrieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,5 +131,14 @@ int			ft_isprime(int nb);
 char		*ft_strnjoin(char const *s1, char const *s2, size_t len);
 
 int			ft_printf(const char *str, ...);
+
+/*
+** Define Get Next Line Buffer size
+*/
+
+# define BUFF_SIZE 100
+
+char		*ft_strjoin_free(char **s1, char **s2, int d);
+int			get_next_line(const int fd, char **line);
 
 #endif
