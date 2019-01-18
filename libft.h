@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 15:23:46 by magrab            #+#    #+#             */
-/*   Updated: 2019/01/15 14:59:52 by tferrieu         ###   ########.fr       */
+/*   Updated: 2019/01/18 18:13:56 by tferrieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,8 @@ int			ft_strsrchr(const char *s, int c);
 char		*ft_strrev(char *str);
 int			ft_sqrt(int nb);
 int			ft_isprime(int nb);
+int			ft_pow(int nb, int pow);
+int			ft_htoi(char *hex);
 
 char		*ft_strnjoin(char const *s1, char const *s2, size_t len);
 
