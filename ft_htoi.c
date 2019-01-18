@@ -6,7 +6,7 @@
 /*   By: tferrieu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 18:06:39 by tferrieu          #+#    #+#             */
-/*   Updated: 2019/01/18 18:11:14 by tferrieu         ###   ########.fr       */
+/*   Updated: 2019/01/18 18:43:32 by tferrieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_htoi(char *hex)
 	int		nb;
 	int		i;
 
-	if (ft_strlen(hex) > 8 || (ft_strlen(hex) == 8 && hex[0] > '7'))
+	if (!hex || ft_strlen(hex) > 8 || (ft_strlen(hex) == 8 && hex[0] > '7'))
 		return (0);
 	nb = 0;
 	i = 0;
