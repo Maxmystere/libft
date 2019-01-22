@@ -6,15 +6,11 @@
 /*   By: tferrieu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 18:06:39 by tferrieu          #+#    #+#             */
-/*   Updated: 2019/01/18 21:13:37 by tferrieu         ###   ########.fr       */
+/*   Updated: 2019/01/22 16:39:30 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-
-
-
 
 int	ft_htoi(char *hex)
 {
@@ -23,7 +19,7 @@ int	ft_htoi(char *hex)
 	int		i;
 
 	if (!hex || !hex[0] || !hex[1] || ft_strlen(hex) > 10 ||
-				(hex[1] != 'x' && hex[1] != 'X') ||	hex[0] != '0' ||
+				(hex[1] != 'x' && hex[1] != 'X') || hex[0] != '0' ||
 				(ft_strlen(hex) == 10 && hex[2] > '7'))
 		return (0);
 	nb = 0;
@@ -37,7 +33,7 @@ int	ft_htoi(char *hex)
 		else if (hex[i] >= 'A' && hex[i] < 'G')
 			val = hex[i] - 'A' + 10;
 		else
-			break;
+			break ;
 		nb = nb * 16 + val;
 		i++;
 	}
