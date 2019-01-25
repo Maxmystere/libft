@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 15:22:43 by magrab            #+#    #+#             */
-/*   Updated: 2018/11/15 15:24:38 by magrab           ###   ########.fr       */
+/*   Updated: 2019/01/25 21:44:10 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	if (n == 0)
-		return (s);
-	*(char *)(s + n - 1) = c;
-	return (ft_memset(s, c, n - 1));
+	unsigned char *str;
+
+	str = s;
+	while (n--)
+		str[n]= (unsigned char)c;
+	return (s);
 }
