@@ -6,7 +6,7 @@
 #    By: magrab <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 19:18:49 by magrab            #+#    #+#              #
-#    Updated: 2019/01/22 16:37:23 by magrab           ###   ########.fr        #
+#    Updated: 2019/01/25 21:59:29 by magrab           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,7 +90,8 @@ SRC=./ft_atoi.c \
 	./get_next_line.c \
 	./ft_pow.c \
 	./ft_htoi.c \
-	./ft_printf.c
+	./ft_printf.c \
+	./ft_abs.c
 
 OBJ=$(SRC:.c=.o)
 

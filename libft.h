@@ -6,7 +6,7 @@
 /*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 15:23:46 by magrab            #+#    #+#             */
-/*   Updated: 2019/01/22 16:36:58 by magrab           ###   ########.fr       */
+/*   Updated: 2019/01/25 21:59:16 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ int			ft_sqrt(int nb);
 int			ft_isprime(int nb);
 int			ft_pow(int nb, int pow);
 int			ft_htoi(char *hex);
+int			ft_abs(int i);
 
 char		*ft_strnjoin(char const *s1, char const *s2, size_t len);
 
