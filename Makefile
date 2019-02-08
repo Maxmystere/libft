@@ -6,7 +6,7 @@
 #    By: magrab <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 19:18:49 by magrab            #+#    #+#              #
-#    Updated: 2019/01/25 21:59:29 by magrab           ###   ########.fr        #
+#    Updated: 2019/02/08 18:38:59 by tferrieu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,7 +91,9 @@ SRC=./ft_atoi.c \
 	./ft_pow.c \
 	./ft_htoi.c \
 	./ft_printf.c \
-	./ft_abs.c
+	./ft_abs.c \
+	./ft_noderm.c \
+	./ft_noderm_int.c
 
 OBJ=$(SRC:.c=.o)
 
