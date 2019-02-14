@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_noderm_int.c                                    :+:      :+:    :+:   */
+/*   ft_nodesearch_int.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferrieu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/08 18:26:52 by tferrieu          #+#    #+#             */
-/*   Updated: 2019/02/14 16:21:14 by tferrieu         ###   ########.fr       */
+/*   Created: 2019/02/14 16:24:37 by tferrieu          #+#    #+#             */
+/*   Updated: 2019/02/14 16:24:38 by tferrieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_noderm_int(t_tab start, t_type elem)
+t_tab	ft_nodesearch(t_tab node, t_type elem)
 {
 	t_tab pos;
 
-	pos = start;
-	while (pos)
+	pos = node;
+	while (pos->prvs)
 	{
 		if (pos->data == elem)
-		{
-			ft_noderm(pos);
-			return (1);
-		}
+			return (pos);
+		pos = pos->prvs;
+	}
+	pos = node;
+	while (pos->next)
+	{
+		if (pos->data == elem)
+			return (pos);
 		pos = pos->next;
 	}
-	return (0);
+	return (NULL);
 }
