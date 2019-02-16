@@ -95,6 +95,7 @@ SRC=./ft_atoi.c \
 	./ft_noderm.c \
 	./ft_noderm_int.c \
 	./ft_nodesearch_int.c \
+	./ft_nodeadd_int.c \
 	./ft_nodeprint_int.c
 
 OBJ=$(SRC:.c=.o)

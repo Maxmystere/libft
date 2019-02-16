@@ -21,9 +21,9 @@ void	ft_nodeprint_int(t_tab node)
 		pos = pos->prvs;
 	while (pos)
 	{
-		ft_printf("%d",pos->data);
+		ft_printf(" %d ",pos->data);
 		if (pos->next)
-			ft_printf(" | ");
+			ft_printf("->");
 		pos = pos->next;
 	}
 }

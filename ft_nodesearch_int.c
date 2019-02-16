@@ -17,13 +17,6 @@ t_tab	ft_nodesearch_int(t_tab node, t_type elem)
 	t_tab pos;
 
 	pos = node;
-	while (pos->prvs)
-	{
-		if (pos->data == elem)
-			return (pos);
-		pos = pos->prvs;
-	}
-	pos = node;
 	while (pos->next)
 	{
 		if (pos->data == elem)

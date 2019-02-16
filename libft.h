@@ -120,6 +120,7 @@ void		ft_noderm(t_tab node);
 void		ft_nodeprint_int(t_tab node);
 int			ft_noderm_int(t_tab node, t_type elem);
 t_tab		ft_nodesearch_int(t_tab node, t_type elem);
+t_tab		ft_nodeadd_int(t_tab *start, t_type data);
 
 char		**ft_2dchar_make(int x, int y, char c);
 int			ft_2dchar_free(char ***map);
