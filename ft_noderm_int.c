@@ -6,7 +6,7 @@
 /*   By: tferrieu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 18:26:52 by tferrieu          #+#    #+#             */
-/*   Updated: 2019/02/14 16:21:14 by tferrieu         ###   ########.fr       */
+/*   Updated: 2019/02/16 16:07:06 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ int	ft_noderm_int(t_tab *start, t_type elem)
 
 	if (!start || !(*start))
 		return (-1);
-	if ((*start)->next == NULL && (*start)->data == elem)
+	if ((*start)->data == elem)
 	{
 		ft_noderm(start);
 		return (1);
 	}
-	pos = *start;
+	pos = (*start)->next;
 	while (pos)
 	{
 		if (pos->data == elem)

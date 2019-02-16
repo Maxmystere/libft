@@ -22,13 +22,11 @@ void	ft_nodeprint_int(t_tab node)
 		return ;
 	}
 	pos = node;
-	while (pos->prvs)
-		pos = pos->prvs;
 	while (pos)
 	{
-		ft_printf("%d ", pos->data);
+		ft_printf("%d", pos->data);
 		if (pos->next)
-			ft_printf("-> ");
+			ft_printf("%c-> ", pos->next->prvs->data == pos->data ? ' ' : '!');
 		pos = pos->next;
 	}
 }

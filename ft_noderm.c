@@ -23,6 +23,7 @@ void	ft_noderm(t_tab *start)
 	if (!start || !(*start))
 		return ;
 	node = *start;
+	*start = NULL;
 	if (node->next)
 		next = node->next;
 	if (node->prvs)
