@@ -16,6 +16,8 @@ t_tab	ft_nodesearch_int(t_tab node, t_type elem)
 {
 	t_tab pos;
 
+	if (!node)
+		return (NULL);
 	pos = node;
 	while (pos->next)
 	{

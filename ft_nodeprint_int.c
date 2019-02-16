@@ -6,7 +6,7 @@
 /*   By: tferrieu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 16:19:48 by tferrieu          #+#    #+#             */
-/*   Updated: 2019/02/14 16:19:50 by tferrieu         ###   ########.fr       */
+/*   Updated: 2019/02/16 14:35:15 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@ void	ft_nodeprint_int(t_tab node)
 {
 	t_tab pos;
 
+	if (!node)
+		return ;
 	pos = node;
 	while (pos->prvs)
 		pos = pos->prvs;
 	while (pos)
 	{
-		ft_printf(" %d ",pos->data);
+		ft_printf(" %d ", pos->data);
 		if (pos->next)
 			ft_printf("->");
 		pos = pos->next;

@@ -116,9 +116,9 @@ t_tab		ft_nodenew(t_type data);
 t_tab		ft_nodepushbegin(t_tab *start, t_type data);
 t_tab		ft_nodepushat(t_tab *start, t_type data, size_t pos);
 t_tab		ft_nodepushend(t_tab *start, t_type data);
-void		ft_noderm(t_tab node);
+void		ft_noderm(t_tab *start);
 void		ft_nodeprint_int(t_tab node);
-int			ft_noderm_int(t_tab node, t_type elem);
+int			ft_noderm_int(t_tab *start, t_type elem);
 t_tab		ft_nodesearch_int(t_tab node, t_type elem);
 t_tab		ft_nodeadd_int(t_tab *start, t_type data);
 

@@ -12,16 +12,23 @@
 
 #include "libft.h"
 
-int	ft_noderm_int(t_tab start, t_type elem)
+int	ft_noderm_int(t_tab *start, t_type elem)
 {
 	t_tab pos;
 
-	pos = start;
+	if (!start || !(*start))
+		return (-1);
+	if ((*start)->next == NULL || (*start)->data == elem)
+	{
+		ft_noderm(start);
+		return (1);
+	}
+	pos = *start;
 	while (pos)
 	{
 		if (pos->data == elem)
 		{
-			ft_noderm(pos);
+			ft_noderm(&pos);
 			return (1);
 		}
 		pos = pos->next;
