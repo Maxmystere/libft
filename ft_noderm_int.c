@@ -18,7 +18,7 @@ int	ft_noderm_int(t_tab *start, t_type elem)
 
 	if (!start || !(*start))
 		return (-1);
-	if ((*start)->next == NULL || (*start)->data == elem)
+	if ((*start)->next == NULL && (*start)->data == elem)
 	{
 		ft_noderm(start);
 		return (1);
