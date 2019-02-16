@@ -19,7 +19,7 @@ t_tab	ft_nodesearch_int(t_tab node, t_type elem)
 	if (!node)
 		return (NULL);
 	pos = node;
-	while (pos->next)
+	while (pos)
 	{
 		if (pos->data == elem)
 			return (pos);
