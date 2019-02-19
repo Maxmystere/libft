@@ -49,7 +49,7 @@ static char		*find_word(char const *s, char c)
 	int		x;
 
 	x = split_strlen(s, c);
-	if (!(word = (char *)malloc(x * sizeof(char))) || x == 1)
+	if (x == 1 || !(word = (char *)malloc(x * sizeof(char))))
 		return (NULL);
 	word[--x] = 0;
 	while (--x >= 0)
