@@ -3,115 +3,63 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: magrab <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: tbottini <tbottini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 19:18:49 by magrab            #+#    #+#              #
-#    Updated: 2019/03/05 12:26:30 by magrab           ###   ########.fr        #
+#    Updated: 2019/04/28 16:40:42 by tbottini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CFLAGS=-W -Wall -Wextra -Werror
-NAME=libft.a
-SRC=./ft_atoi.c \
-	./ft_bzero.c \
-	./ft_isalnum.c \
-	./ft_isalpha.c \
-	./ft_isascii.c \
-	./ft_isdigit.c \
-	./ft_islower.c \
-	./ft_isprime.c \
-	./ft_isprint.c \
-	./ft_isspace.c \
-	./ft_isupper.c \
-	./ft_itoa.c \
-	./ft_lstadd.c \
-	./ft_lstdel.c \
-	./ft_lstdelone.c \
-	./ft_lstiter.c \
-	./ft_lstmap.c \
-	./ft_lstnew.c \
-	./ft_memalloc.c \
-	./ft_memccpy.c \
-	./ft_memchr.c \
-	./ft_memcmp.c \
-	./ft_memcpy.c \
-	./ft_memdel.c \
-	./ft_memmove.c \
-	./ft_memset.c \
-	./ft_nodenew.c \
-	./ft_nodepushat.c \
-	./ft_nodepushbegin.c \
-	./ft_nodepushend.c \
-	./ft_putchar.c \
-	./ft_putchar_fd.c \
-	./ft_putendl.c \
-	./ft_putendl_fd.c \
-	./ft_putnbr.c \
-	./ft_putnbr_fd.c \
-	./ft_putstr.c \
-	./ft_putstr_fd.c \
-	./ft_sqrt.c \
-	./ft_strcat.c \
-	./ft_strchr.c \
-	./ft_strclr.c \
-	./ft_strcmp.c \
-	./ft_strcpy.c \
-	./ft_strdel.c \
-	./ft_strdup.c \
-	./ft_strequ.c \
-	./ft_striter.c \
-	./ft_striteri.c \
-	./ft_strjoin.c \
-	./ft_strlcat.c \
-	./ft_strlen.c \
-	./ft_strmap.c \
-	./ft_strmapi.c \
-	./ft_strncat.c \
-	./ft_strncmp.c \
-	./ft_strncpy.c \
-	./ft_strnequ.c \
-	./ft_strnew.c \
-	./ft_strnew_set.c \
-	./ft_strnjoin.c \
-	./ft_strnstr.c \
-	./ft_strrchr.c \
-	./ft_strrev.c \
-	./ft_strsplit.c \
-	./ft_strsrchr.c \
-	./ft_strstr.c \
-	./ft_strsub.c \
-	./ft_strtrim.c \
-	./ft_tolower.c \
-	./ft_toupper.c \
-	./ft_2dchar_make.c \
-	./ft_2dchar_free.c \
-	./ft_2dchar_print.c \
-	./ft_strjoin_free.c \
-	./get_next_line.c \
-	./ft_pow.c \
-	./ft_htoi.c \
-	./ft_printf.c \
-	./ft_abs.c \
-	./ft_fabs.c \
-	./ft_noderm.c \
-	./ft_noderm_int.c \
-	./ft_nodesearch_int.c \
-	./ft_nodeadd_int.c \
-	./ft_nodeprint_int.c
+include include.mk
 
-OBJ=$(SRC:.c=.o)
+NAME		:=		libft.a
 
-all: $(NAME)
+INCLUDE 	:=		-I /usr/local/include -I ../include
 
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
+CC			:=		gcc
+
+CFLAGS		:=		-Wall -Wextra -Werror
+
+LIB 		:=
+
+NB_SRCS			:=		$(shell ls *.c | wc -l)
+
+NB_OBJS			=		$(shell ls | rev | grep "^o" | wc -l | sed -e 's/[^0-9]//g')
+
+MAX_FILL		:=		$$(( $(NB_SRCS) / 2))
+
+FILL_BAR		=		$$(( $(NB_OBJS) * $(MAX_FILL) / $(NB_SRCS)))
+
+PERCENT			=		$$((  $(NB_OBJS) * 100 / $(NB_SRCS)))
+
+INV_FILL_BAR	=		$$(( $(MAX_FILL) - $(FILL_BAR)))
+
+OBJS = $(SRCS_LIBFT:.c=.o)
+
+all: $ $(NAME)
+
+%.o		:		%.c libft.h
+	@printf '\rCompilation $(NAME)\n'
+	@printf '[\e[36m%*s' $(FILL_BAR) | tr ' ' '#'
+	@printf '%*s\e[0m] \e[36m $<\e[0m' $(INV_FILL_BAR)
+	@$(CC) $(CFLAGS)  -c -o $@ $<
+	@printf '\033[M\033[A'
+
+$(NAME)	: $(OBJS)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
+	@printf "\e[M\e[A\n\e[36m[--------Libft--------]\n\e[0m"
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+
+verif		:
+	norminette $(SRCS_LIBFT) include/libft.h
+	$(all)
 
 re: fclean all
 
-.PHONY: all $(name) clean fclean re
+.PHONY: all clean fclean re a
