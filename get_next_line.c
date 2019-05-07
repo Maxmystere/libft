@@ -74,7 +74,10 @@ int			get_next_line(const int fd, char **line)
 			|| !(buff = ft_strnew(BUFF_SIZE + 1)))
 		return (-1);
 	if (!(*line = ft_strnew(0)))
+	{
+		free(buff);
 		return (-1);
+	}
 	buff = ft_strcpy(buff, pos->content);
 	bol = ft_strlen(buff);
 	while ((status = backn(line, buff, bol, pos)) > 0
