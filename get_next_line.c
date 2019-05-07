@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tferrieu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: magrab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/05 12:19:28 by tferrieu          #+#    #+#             */
-/*   Updated: 2019/01/15 14:53:36 by tferrieu         ###   ########.fr       */
+/*   Created: 2018/12/05 12:19:28 by magrab            #+#    #+#             */
+/*   Updated: 2019/01/15 14:53:36 by magrab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,15 +70,15 @@ int			get_next_line(const int fd, char **line)
 	int				bol;
 	int				status;
 
-	if (fd < 0 || !line || init_lst(fd, &fds, &pos) < 1 ||
-			!(buff = ft_strnew(BUFF_SIZE + 1)))
+	if (fd < 0 || !line || init_lst(fd, &fds, &pos) < 1
+			|| !(buff = ft_strnew(BUFF_SIZE + 1)))
 		return (-1);
 	if (!(*line = ft_strnew(0)))
 		return (-1);
 	buff = ft_strcpy(buff, pos->content);
 	bol = ft_strlen(buff);
-	while ((status = backn(line, buff, bol, pos)) > 0 &&
-			(bol = read(fd, buff, BUFF_SIZE)) > 0)
+	while ((status = backn(line, buff, bol, pos)) > 0
+			&& (bol = read(fd, buff, BUFF_SIZE)) > 0)
 		;
 	free(buff);
 	return ((status && ft_strlen(*line)) || (bol > 0) ? 1 : bol);

@@ -28,8 +28,8 @@ static size_t	trim_strlen(const char *s)
 			if (s[x + c] == ' ' || s[x + c] == '\n' || s[x + c] == '\t')
 			{
 				t = 0;
-				while (s[x + c + t] == ' ' || s[x + c + t] == '\n' ||
-						s[x + c + t] == '\t' || s[x + c + t] == '\0')
+				while (s[x + c + t] == ' ' || s[x + c + t] == '\n'
+						|| s[x + c + t] == '\t' || s[x + c + t] == '\0')
 				{
 					if (s[x + c + t] == '\0')
 						return (c);
