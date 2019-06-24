@@ -29,19 +29,19 @@ static size_t	nbrlen(int n)
 	return (x);
 }
 
-static char		*if_zero(char p[12])
+static char		*if_zero(char *p)
 {
 	p[0] = '0';
 	p[1] = 0;
 	return (p);
 }
 
-char			*ft_itoacpy(char p[12], int n)
+char			*ft_itoacpy(char *p, int n)
 {
 	if (n == 0)
 		return (if_zero(p));
 	p += nbrlen(n);
-	if (p && *p != '0')
+	if (p)
 	{
 		*p = 0;
 		if (n >= 0 && p)
