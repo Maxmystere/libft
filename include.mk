@@ -85,4 +85,5 @@ SRCS_LIBFT=./ft_atoi.c \
 	./ft_noderm_int.c \
 	./ft_nodesearch_int.c \
 	./ft_nodeadd_int.c \
+	./ft_nodeclean.c \
 	./ft_nodeprint_int.c
